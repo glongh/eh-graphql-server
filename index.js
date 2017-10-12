@@ -8,6 +8,7 @@ const {
     GraphQLBoolean, 
     GraphQLID,
     GraphQLString,
+    GraphQLNonNull,
 } = require('graphql');
 
 const { graphql, buildSchema } = require('graphql');
@@ -49,7 +50,7 @@ const queryType = new GraphQLObjectType({
             type: videoType,
             args: {
                 id: {
-                    type: GraphQLID,
+                    type: new GraphQLNonNull(GraphQLID),
                     description: 'The id of the video'
                 }
             },
@@ -61,9 +62,7 @@ const queryType = new GraphQLObjectType({
 });
 
 const schema = new GraphQLSchema({
-    query: queryType,
-    //mutation,
-    //subscription
+    query: queryType
 });
 
 
