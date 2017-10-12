@@ -1,14 +1,14 @@
 
 const videoA = {
     id:  'a',
-    title:  'Create a GraphQL Schema',
+    title:  'This is a shoot 1',
     duration: 120,
     watched:  true,
 }
 
 const videoB = {
     id:  'b',
-    title:  'GraphQL Schema',
+    title:  'This is a second shoot',
     duration: 180,
     watched:  false,
 }
